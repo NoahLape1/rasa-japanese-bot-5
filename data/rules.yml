@@ -33,92 +33,92 @@ rules:
 # Conversation part 1 (high confidence)
 - rule: part 1A
   steps:
-  - intent: inform_jap_level
-  - action: utter_ask_education
+  - intent: inform_wakeup
+  - action: utter_ask_breakfast
 
 # Conversation part 2 (high confidence)
 - rule: part 2A
   steps:
-  - intent: inform_education
-  - action: utter_ask_name_english
+  - intent: inform_breakfast
+  - action: utter_ask_go_school
 
 # Conversation part 3 (high confidence)
 - rule: part 3A
   steps:
-  - intent: inform_name
-  - action: utter_ask_hometown
+  - intent: inform_go_school
+  - action: utter_ask_lunch
 
 # Conversation part 4 (high confidence)
 - rule: part 4A
   steps:
-  - intent: inform_hometown
-  - action: utter_ask_been_Japan
+  - intent: inform_lunch
+  - action: utter_ask_go_home
 
 # Conversation part 5 (high confidence)
 - rule: part 5A
   steps:
-  - intent: inform_Japan_trip
-  - action: utter_ask_preference
+  - intent: inform_go_home
+  - action: utter_ask_dinner
 
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
-  - intent: inform_Japan_preference
-  - action: utter_ask_food
+  - intent: inform_dinner
+  - action: utter_ask_TV
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
-  - intent: inform_Japan_food
-  - action: utter_ask_onsen
+  - intent: inform_TV
+  - action: utter_ask_sleep
 
 # Conversation part 8 (high confidence)
 - rule: part 8A
   steps:
-  - intent: inform_onsen
+  - intent: inform_sleep
   - action: utter_askme
 
 # Conversation part 1 (low confidence)
 - rule: part 1B
   steps:
   - action: activate_p1
-  - action: utter_ask_education
+  - action: utter_ask_breakfast
 
 # Conversation part 2 (low confidence)
 - rule: part 2B
   steps:
   - action: activate_p2
-  - action: utter_ask_name_english
+  - action: utter_ask_go_school
 
 # Conversation part 3 (low confidence)
 - rule: part 3B
   steps:
   - action: activate_p3
-  - action: utter_ask_hometown
+  - action: utter_ask_lunch
 
 # Conversation part 4 (low confidence)
 - rule: part 4B
   steps:
   - action: activate_p4
-  - action: utter_ask_been_Japan
+  - action: utter_ask_go_home
 
 # Conversation part 5 (low confidence)
 - rule: part 5B
   steps:
   - action: activate_p5
-  - action: utter_ask_preference
+  - action: utter_ask_dinner
 
 # Conversation part 6 (low confidence)
 - rule: part 6
   steps:
   - action: activate_p6
-  - action: utter_ask_food
+  - action: utter_ask_TV
 
 # Conversation part 7 (low confidence)
 - rule: part 7B
   steps:
   - action: activate_p7
-  - action: utter_ask_onsen
+  - action: utter_ask_sleep
 
 # Conversation part 8 (low confidence)
 - rule: part 8B

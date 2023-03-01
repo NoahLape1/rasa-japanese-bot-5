@@ -10,14 +10,14 @@ intents:
 - inform_recipient
 
 ##################################################################################################
-- inform_jap_level
-- inform_education
-- inform_name
-- inform_hometown
-- inform_Japan_trip
-- inform_preference
-- inform_food
-- inform_onsen
+- inform_wakeup
+- inform_breakfast
+- inform_go_school
+- inform_lunch
+- inform_go_home
+- inform_dinner
+- inform_TV
+- inform_sleep
 ##################################################################################################
 - question
 #- ask_specific
@@ -48,41 +48,41 @@ responses:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
 
 ##################################################################################################
-  utter_ask_jap_level:
-  - text: あれ、日本語を話しますか？
-  utter_ask_education:
-  - text: どこで日本語を勉強なさいましたか？
-  utter_ask_name_english:
-  - text: すごいですね。お名前は？
-  utter_ask_hometown:
-  - text: ごしゅっしんはどちらですか？
-  utter_ask_been_Japan:
-  - text: 日本にいらっしゃったことがありますか？
-  utter_ask_preference:
-  - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
-  utter_ask_food:
-  - text: どんな日本の料理がお好きですか？
-  utter_ask_onsen:
-  - text: 日本のおんせんをどう思いまか？
+  utter_ask_wakeup:
+  - text: 何時におきますか？
+  utter_ask_breakfast:
+  - text: 何時にあさごはんをたべますか？
+  utter_ask_go_school:
+  - text: 何時にがっこうにいきますか？
+  utter_ask_lunch:
+  - text: 何時にひるごはんをたべますか？
+  utter_ask_go_home:
+  - text: 何時にいえにかえりますか？
+  utter_ask_dinner:
+  - text: 何時にばんごはんをたべますか？
+  utter_ask_TV:
+  - text: 何時にテレビをみますか？
+  utter_ask_sleep:
+  - text: 何時にねますか？
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
-  utter_question/ask_live:
-  - text: 北海度からまいります。
-  utter_question/ask_occupation:
-  - text: 医者として働いております。
-  utter_question/ask_family:
-  - text: お母さんとお父さんは京都に住んでおります。兄は東京にいます。
-  utter_question/ask_kids:
-  - text: 子供が一人おります。むすめは21歳でございまず。
-  utter_question/ask_America_activity:
-  - text: 7月4日に花火に見にまいりました。
-  utter_question/ask_America_reason:
-  - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。
-  utter_question/ask_America_where:
-  - text: ワシントンDCとテネシーにまいりました。
-  utter_question/ask_food:
-  - text: ホットドッグとハンバーガーをいただきました。
+  utter_question/ask_wakeup:
+  - text: わたしはコンピューターです。ねません。
+  utter_question/ask_breakfast:
+  - text: ななじにあさごはんをたべます。ごはんとさかなをたべます。
+  utter_question/ask_go_school:
+  - text: はち時はんにがっこうにいきます。せんこうはコンピューターです。
+  utter_question/ask_lunch:
+  - text: じゅういちじはんにひるごはんをたべます。ピザとアイスクリームをたべます。
+  utter_question/ask_go_home:
+  - text: よくご時にいえにかえります。
+  utter_question/ask_dinner:
+  - text: まいばんろく時にばんごはんをたべます。ばんごはんはおいしいですよ。
+  utter_question/ask_TV:
+  - text: ぜんぜんテレビをみません。
+  utter_question/ask_sleep:
+  - text: ときどきじゅうに時はんにねます。でも、あまりねません。
 
 entities:
 - name
@@ -134,24 +134,24 @@ actions:
 - activate_p7
 - activate_p8
 ##################################################################################################
-- utter_ask_jap_level
-- utter_ask_education
-- utter_ask_name_english
-- utter_ask_hometown
-- utter_ask_been_Japan
-- utter_ask_destination_Japan
-- utter_ask_activity_Japan
-- utter_ask_current_residence
+- utter_ask_wakeup
+- utter_ask_breakfast
+- utter_ask_go_school
+- utter_ask_lunch
+- utter_ask_go_home
+- utter_ask_dinner
+- utter_ask_TV
+- utter_ask_sleep
 ##################################################################################################
-- utter_question/ask_live
-- utter_question/ask_occupation
-- utter_question/ask_family
-- utter_question/ask_kids
-- utter_question/ask_America_activity
-- utter_question/ask_America_reason
-- utter_question/ask_America_where
-- utter_question/ask_food
-#- utter_tell_specific
+- utter_question/ask_wakeup
+- utter_question/ask_breakfast
+- utter_question/ask_go_school
+- utter_question/ask_lunch
+- utter_question/ask_go_home
+- utter_question/ask_dinner
+- utter_question/ask_TV
+- utter_question/ask_sleep
+
 
 session_config:
   session_expiration_time: 60

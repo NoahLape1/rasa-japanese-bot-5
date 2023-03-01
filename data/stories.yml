@@ -7,22 +7,22 @@ stories:
   - intent: greet
   - action: utter_hello
   - action: utter_greet
-  - action: utter_ask_jap_level
-  - intent: inform_jap_level
-  - action: utter_ask_education
-  - intent: inform_education
-  - action: utter_ask_name_english
-  - intent: inform_name
-  - action: utter_ask_hometown
-  - intent: inform_hometown
-  - action: utter_ask_been_Japan
-  - intent: inform_Japan_trip
-  - action: utter_ask_preference
-  - intent: inform_preference
-  - action: utter_ask_food
-  - intent: inform_food
-  - action: utter_ask_onsen
-  - intent: inform_onsen
+  - action: utter_ask_wakeup
+  - intent: inform_wakeup
+  - action: utter_ask_breakfast
+  - intent: inform_breakfast
+  - action: utter_ask_go_school
+  - intent: inform_go_school
+  - action: utter_ask_lunch
+  - intent: inform_lunch
+  - action: utter_ask_go_home
+  - intent: inform_go_home
+  - action: utter_ask_dinner
+  - intent: inform_dinner
+  - action: utter_ask_TV
+  - intent: inform_TV
+  - action: utter_ask_sleep
+  - intent: inform_sleep
   - action: utter_askme
 #  - action: utter_thanks_for_talking
 #  - action: utter_goodbye
