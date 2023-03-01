@@ -1,0 +1,127 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'ボートです。' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# simple fallback:
+- rule: Single stage fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_ask_affirmation
+
+# User says "I don't know"
+- rule: Send user inform_idk to fallback
+  steps:
+  - intent: inform_idk
+  - action: action_default_ask_affirmation
+
+#User asks a question
+- rule: user asks a question
+  steps:
+  - intent: question
+  - action: utter_question
+  - action: action_check_numQ
+
+# Conversation part 1 (high confidence)
+- rule: part 1A
+  steps:
+  - intent: inform_jap_level
+  - action: utter_ask_education
+
+# Conversation part 2 (high confidence)
+- rule: part 2A
+  steps:
+  - intent: inform_education
+  - action: utter_ask_name_english
+
+# Conversation part 3 (high confidence)
+- rule: part 3A
+  steps:
+  - intent: inform_name
+  - action: utter_ask_hometown
+
+# Conversation part 4 (high confidence)
+- rule: part 4A
+  steps:
+  - intent: inform_hometown
+  - action: utter_ask_been_Japan
+
+# Conversation part 5 (high confidence)
+- rule: part 5A
+  steps:
+  - intent: inform_Japan_trip
+  - action: utter_ask_preference
+
+# Conversation part 6 (high confidence)
+- rule: part 6A
+  steps:
+  - intent: inform_Japan_preference
+  - action: utter_ask_food
+
+# Conversation part 7 (high confidence)
+- rule: part 7A
+  steps:
+  - intent: inform_Japan_food
+  - action: utter_ask_onsen
+
+# Conversation part 8 (high confidence)
+- rule: part 8A
+  steps:
+  - intent: inform_onsen
+  - action: utter_askme
+
+# Conversation part 1 (low confidence)
+- rule: part 1B
+  steps:
+  - action: activate_p1
+  - action: utter_ask_education
+
+# Conversation part 2 (low confidence)
+- rule: part 2B
+  steps:
+  - action: activate_p2
+  - action: utter_ask_name_english
+
+# Conversation part 3 (low confidence)
+- rule: part 3B
+  steps:
+  - action: activate_p3
+  - action: utter_ask_hometown
+
+# Conversation part 4 (low confidence)
+- rule: part 4B
+  steps:
+  - action: activate_p4
+  - action: utter_ask_been_Japan
+
+# Conversation part 5 (low confidence)
+- rule: part 5B
+  steps:
+  - action: activate_p5
+  - action: utter_ask_preference
+
+# Conversation part 6 (low confidence)
+- rule: part 6
+  steps:
+  - action: activate_p6
+  - action: utter_ask_food
+
+# Conversation part 7 (low confidence)
+- rule: part 7B
+  steps:
+  - action: activate_p7
+  - action: utter_ask_onsen
+
+# Conversation part 8 (low confidence)
+- rule: part 8B
+  steps:
+  - action: activate_p8
+  - action: utter_askme

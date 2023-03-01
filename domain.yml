@@ -1,0 +1,158 @@
+version: '3.1'
+intents:
+- bot_challenge
+- goodbye
+- greet
+- inform_idk
+- inform_yes
+- inform_no
+- inform_email
+- inform_recipient
+
+##################################################################################################
+- inform_jap_level
+- inform_education
+- inform_name
+- inform_hometown
+- inform_Japan_trip
+- inform_preference
+- inform_food
+- inform_onsen
+##################################################################################################
+- question
+#- ask_specific
+
+responses:
+  utter_hello:
+  - text: こんにちは! 
+  utter_greet:
+  - text: はじめまして、 わたしはにほんごのチャットボットです。(。・ω・)ノ
+    image: https://media.tenor.com/ule8gL4rTIgAAAAC/peach-cat-mochi-mochi.gif
+  utter_goodbye:
+  - text: ではまたね。(・ω・)ノ
+    image: https://media.tenor.com/inhg61kTkrwAAAAi/cute.gif
+  utter_iamabot:
+  - text: ラサのボートです.
+    image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
+  utter_ask_name:
+  - text: おなまえは？
+  utter_thanks_for_talking:
+  - text: ありがとうございました！
+  utter_default:
+  - text: すみません、わかりません。 Please rephrase your answer.
+  utter_askrecipient:
+  - text: Please type the name of the person you want to email.
+  utter_askemail:
+  - text: Please enter the email address of the person you want to email.
+  utter_askifsendemail:
+  - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+
+##################################################################################################
+  utter_ask_jap_level:
+  - text: あれ、日本語を話しますか？
+  utter_ask_education:
+  - text: どこで日本語を勉強なさいましたか？
+  utter_ask_name_english:
+  - text: すごいですね。お名前は？
+  utter_ask_hometown:
+  - text: ごしゅっしんはどちらですか？
+  utter_ask_been_Japan:
+  - text: 日本にいらっしゃったことがありますか？
+  utter_ask_preference:
+  - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
+  utter_ask_food:
+  - text: どんな日本の料理がお好きですか？
+  utter_ask_onsen:
+  - text: 日本のおんせんをどう思いまか？
+  utter_askme:
+  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
+##############################################################################################
+  utter_question/ask_live:
+  - text: 北海度からまいります。
+  utter_question/ask_occupation:
+  - text: 医者として働いております。
+  utter_question/ask_family:
+  - text: お母さんとお父さんは京都に住んでおります。兄は東京にいます。
+  utter_question/ask_kids:
+  - text: 子供が一人おります。むすめは21歳でございまず。
+  utter_question/ask_America_activity:
+  - text: 7月4日に花火に見にまいりました。
+  utter_question/ask_America_reason:
+  - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。
+  utter_question/ask_America_where:
+  - text: ワシントンDCとテネシーにまいりました。
+  utter_question/ask_food:
+  - text: ホットドッグとハンバーガーをいただきました。
+
+entities:
+- name
+- email
+- education
+- hometown
+- japan_place
+- food
+
+slots:
+  name:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+
+actions:
+- action_default_ask_affirmation
+- after_handle_did_not_understand_answer
+- action_email
+- action_delete_conversation_txt
+- utter_hello
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_thanks_for_talking
+- utter_default
+- utter_askemail
+- utter_askrecipient
+- utter_askifsendemail
+- log_conversation_bot
+- log_conversation_user
+- action_check_numQ
+- action_make_file
+- activate_p1
+- activate_p2
+- activate_p3
+- activate_p4
+- activate_p5
+- activate_p6
+- activate_p7
+- activate_p8
+##################################################################################################
+- utter_ask_jap_level
+- utter_ask_education
+- utter_ask_name_english
+- utter_ask_hometown
+- utter_ask_been_Japan
+- utter_ask_destination_Japan
+- utter_ask_activity_Japan
+- utter_ask_current_residence
+##################################################################################################
+- utter_question/ask_live
+- utter_question/ask_occupation
+- utter_question/ask_family
+- utter_question/ask_kids
+- utter_question/ask_America_activity
+- utter_question/ask_America_reason
+- utter_question/ask_America_where
+- utter_question/ask_food
+#- utter_tell_specific
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
