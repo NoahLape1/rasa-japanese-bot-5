@@ -67,6 +67,23 @@ responses:
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
+  utter_respond_wakeup:
+  - text: すごい、{time}におきます。はやいですね。
+  utter_respond_breakfast:
+  - text: そうか。{time}にあさごはんをたべます。
+  utter_respond_go_school:
+  - text: そうか。{time}にがっこうにいきます。
+  utter_respond_lunch:
+  - text: そうですね。{time}にひるごはんをたべます。
+  utter_respond_go_home:
+  - text: そうか。{time}にいえにかえります。
+  utter_respond_dinner:
+  - text: そうですね。{time}にぼんごはんをたべます。
+  utter_respond_TV:
+  - text: そうですね。{time}にテレビをみます。
+  utter_respond_sleep:
+  - text: そうか。{time}にねます。
+##############################################################################################
   utter_question/ask_wakeup:
   - text: わたしはコンピューターです。ねません。
   utter_question/ask_breakfast:
@@ -83,9 +100,11 @@ responses:
   - text: ぜんぜんテレビをみません。
   utter_question/ask_sleep:
   - text: ときどきじゅうに時はんにねます。でも、あまりねません。
+##############################################################################################
 
 entities:
 - name
+- time
 - email
 - education
 - hometown
@@ -100,6 +119,13 @@ slots:
     mappings:
     - type: from_entity
       entity: name
+  time:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: time
   email:
     type: text
     influence_conversation: true

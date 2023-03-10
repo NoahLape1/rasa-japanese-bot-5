@@ -10,20 +10,28 @@ stories:
   - action: action_make_file
   - action: utter_ask_wakeup
   - intent: inform_wakeup
+  - action: utter_respond_wakeup
   - action: utter_ask_breakfast
   - intent: inform_breakfast
+  - action: utter_respond_breakfast
   - action: utter_ask_go_school
   - intent: inform_go_school
+  - action: utter_respond_go_school
   - action: utter_ask_lunch
   - intent: inform_lunch
+  - action: utter_respond_lunch
   - action: utter_ask_go_home
   - intent: inform_go_home
+  - action: utter_respond_go_home
   - action: utter_ask_dinner
   - intent: inform_dinner
+  - action: utter_respond_dinner
   - action: utter_ask_TV
   - intent: inform_TV
+  - action: utter_respond_TV
   - action: utter_ask_sleep
   - intent: inform_sleep
+  - action: utter_respond_sleep
   - action: utter_askme
 #  - action: utter_thanks_for_talking
 #  - action: utter_goodbye
