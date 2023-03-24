@@ -8,6 +8,7 @@ intents:
 - inform_no
 - inform_email
 - inform_recipient
+- inform_name
 
 ##################################################################################################
 - inform_wakeup
@@ -110,6 +111,7 @@ entities:
 - hometown
 - japan_place
 - food
+- recipient
 
 slots:
   name:
@@ -132,11 +134,18 @@ slots:
     mappings:
     - type: from_entity
       entity: email
+  recipient:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: recipient
 
 actions:
 - action_default_ask_affirmation
 - after_handle_did_not_understand_answer
 - action_email
+- collect_email_info
 - action_delete_conversation_txt
 - utter_hello
 - utter_greet
@@ -151,6 +160,7 @@ actions:
 - log_conversation_user
 - action_check_numQ
 - action_make_file
+- utter_ask_name
 - activate_p1
 - activate_p2
 - activate_p3
@@ -159,6 +169,7 @@ actions:
 - activate_p6
 - activate_p7
 - activate_p8
+- activate_p0
 ##################################################################################################
 - utter_ask_wakeup
 - utter_ask_breakfast

@@ -44,22 +44,24 @@ class ActionDefaultAskAffirmation(Action):
        print(lastBotMessage)
        
        # triggers different rules based on last bot question
-       if lastBotMessage == "あれ、日本語を話しますか？":
+       if lastBotMessage == "何時におきますか？":
            return [FollowupAction("activate_p1")]
-       elif lastBotMessage == "どこで日本語を勉強なさいましたか？":
+       elif lastBotMessage == "何時にあさごはんをたべますか？":
            return [FollowupAction("activate_p2")]
-       elif lastBotMessage == "すごいですね。お名前は？":
+       elif lastBotMessage == "何時にがっこうにいきますか？":
            return [FollowupAction("activate_p3")]
-       elif lastBotMessage == "ごしゅっしんはどちらですか？":
+       elif lastBotMessage == "何時にひるごはんをたべますか？":
            return [FollowupAction("activate_p4")]
-       elif lastBotMessage == "日本にいらっしゃったことがありますか？":
+       elif lastBotMessage == "何時にいえにかえりますか？":
            return [FollowupAction("activate_p5")]
-       elif lastBotMessage == "日本のどこにいらっしゃいますか？":
+       elif lastBotMessage == "何時にばんごはんをたべますか？":
            return [FollowupAction("activate_p6")]
-       elif lastBotMessage == "日本で何をなさいますか？":
+       elif lastBotMessage == "何時にテレビをみますか？":
            return [FollowupAction("activate_p7")]   
-       elif lastBotMessage == "どこに住んでいらっしゃいますか？":
-           return [FollowupAction("activate_p8")]        
+       elif lastBotMessage == "何時にねますか？":
+           return [FollowupAction("activate_p8")]   
+       elif lastBotMessage == "おなまえは？":
+           return [FollowupAction("activate_p0")]   
        # Fallback for if the bot doesn't understand the receipient's name for the email or the email address
        elif "Please type the name of the person you want to email." in lastBotMessage:
            dispatcher.utter_message('The person you want to email is ' + lastOutput)
@@ -278,6 +280,7 @@ class ActionEmail(Action):
 	# The email address below is the person who is SENDING the mail  
         # Sending the mail
         s.sendmail("academictechnology@dickinson.edu",email_id, message.encode("utf8"))
+        s.sendmail("academictechnology@dickinson.edu","bryantt@dickinson.edu", message.encode("utf8")) #This line sends the email to Todd always
           
         # Closing the connection
         s.quit()
@@ -351,6 +354,7 @@ class ActionCheckNumQuestions(Action):
             question_txt = open(uniqueFile, "w")
             question_txt.write("0")
             question_txt.close()
+            return [FollowupAction("utter_askifsendemail")]
 
         # return[] we aren't really returning anything
         
@@ -441,6 +445,15 @@ class ActionActivatePart8(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print("Activating part 8 of the conversation")
+        return[]
+
+class ActionActivatePart8(Action):
+    def name(self) -> Text:
+        return "activate_p0"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 0 of the conversation")
         return[]
 
 # class ActionTest(Action):
