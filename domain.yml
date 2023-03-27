@@ -11,17 +11,17 @@ intents:
 - inform_name
 
 ##################################################################################################
-- inform_wakeup
-- inform_breakfast
-- inform_go_school
-- inform_lunch
-- inform_go_home
-- inform_dinner
-- inform_TV
-- inform_sleep
+- inform_dessert
+- inform_food
+- inform_person
+- inform_sport
+- inform_country
+- inform_place
+- inform_mean
+- inform_time
 ##################################################################################################
 - question
-#- ask_specific
+
 
 responses:
   utter_hello:
@@ -49,60 +49,49 @@ responses:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
 
 ##################################################################################################
-  utter_ask_wakeup:
-  - text: 何時におきますか？
-  utter_ask_breakfast:
-  - text: 何時にあさごはんをたべますか？
-  utter_ask_go_school:
-  - text: 何時にがっこうにいきますか？
-  utter_ask_lunch:
-  - text: 何時にひるごはんをたべますか？
-  utter_ask_go_home:
-  - text: 何時にいえにかえりますか？
-  utter_ask_dinner:
-  - text: 何時にばんごはんをたべますか？
-  utter_ask_TV:
-  - text: 何時にテレビをみますか？
-  utter_ask_sleep:
-  - text: 何時にねますか？
+  utter_ask_dessert:
+  - text: PLACEHOLDER
+  utter_ask_food:
+  - text: PLACEHOLDER
+  utter_ask_person:
+  - text: PLACEHOLDER
+  utter_ask_sport:
+  - text: PLACEHOLDER
+  utter_ask_country:
+  - text: PLACEHOLDER
+  utter_ask_place:
+  - text: PLACEHOLDER
+  utter_ask_mean:
+  - text: PLACEHOLDER
+  utter_ask_time:
+  - text: PLACEHOLDER
   utter_askme:
-  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
+  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
 ##############################################################################################
-  utter_respond_wakeup:
-  - text: すごい、{time}におきます。はやいですね。
-  utter_respond_breakfast:
-  - text: そうか。{time}にあさごはんをたべます。
-  utter_respond_go_school:
-  - text: そうか。{time}にがっこうにいきます。
-  utter_respond_lunch:
-  - text: そうですね。{time}にひるごはんをたべます。
-  utter_respond_go_home:
-  - text: そうか。{time}にいえにかえります。
-  utter_respond_dinner:
-  - text: そうですね。{time}にぼんごはんをたべます。
-  utter_respond_TV:
-  - text: そうですね。{time}にテレビをみます。
-  utter_respond_sleep:
-  - text: そうか。{time}にねます。
+  utter_respond_dessert:
+  - text: PLACEHOLDER
+  utter_respond_food:
+  - text: PLACEHOLDER
+  utter_respond_person:
+  - text: PLACEHOLDER
+  utter_respond_sport:
+  - text: PLACEHOLDER
+  utter_respond_country:
+  - text: PLACEHOLDER
+  utter_respond_place:
+  - text: PLACEHOLDER
+  utter_respond_mean:
+  - text: PLACEHOLDER
+  utter_respond_time:
+  - text: PLACEHOLDER
 ##############################################################################################
-  utter_question/ask_wakeup:
-  - text: わたしはコンピューターです。ねません。
-  utter_question/ask_breakfast:
-  - text: ななじにあさごはんをたべます。ごはんとさかなをたべます。
-  utter_question/ask_go_school:
-  - text: はち時はんにがっこうにいきます。せんこうはコンピューターです。
-  utter_question/ask_lunch:
-  - text: じゅういちじはんにひるごはんをたべます。ピザとアイスクリームをたべます。
-  utter_question/ask_go_home:
-  - text: よくご時にいえにかえります。
-  utter_question/ask_dinner:
-  - text: まいばんろく時にばんごはんをたべます。ばんごはんはおいしいですよ。
-  utter_question/ask_TV:
-  - text: ぜんぜんテレビをみません。
-  utter_question/ask_sleep:
-  - text: ときどきじゅうに時はんにねます。でも、あまりねません。
+  utter_question/ask_something:
+  - text: PLACEHOLDER
+  utter_question/ask_somethingTwo:
+  - text: PLACEHOLDER
 ##############################################################################################
 
+#BIG SLOT AND ENTITY WORK | USE SLOT + CONDITIONAL ACTION TO HAVE EVENTS
 entities:
 - name
 - time
@@ -171,23 +160,17 @@ actions:
 - activate_p8
 - activate_p0
 ##################################################################################################
-- utter_ask_wakeup
-- utter_ask_breakfast
-- utter_ask_go_school
-- utter_ask_lunch
-- utter_ask_go_home
-- utter_ask_dinner
-- utter_ask_TV
-- utter_ask_sleep
+- utter_ask_dessert
+- utter_ask_food
+- utter_ask_person
+- utter_ask_sport
+- utter_ask_country
+- utter_ask_place
+- utter_ask_mean
+- utter_ask_time
 ##################################################################################################
-- utter_question/ask_wakeup
-- utter_question/ask_breakfast
-- utter_question/ask_go_school
-- utter_question/ask_lunch
-- utter_question/ask_go_home
-- utter_question/ask_dinner
-- utter_question/ask_TV
-- utter_question/ask_sleep
+- utter_question/ask_something
+- utter_question/ask_somethingTwo
 
 
 session_config:

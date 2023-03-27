@@ -43,85 +43,85 @@ rules:
   steps:
   - intent: inform_name
   - action: log_conversation_user
-  - action: utter_ask_wakeup
+  - action: utter_ask_dessert
   - action: log_conversation_bot
 
 # Conversation part 1 (high confidence)
 - rule: part 1A
   steps:
-  - intent: inform_wakeup
+  - intent: inform_dessert
   - action: log_conversation_user
-  - action: utter_respond_wakeup
+  - action: utter_respond_dessert
   - action: log_conversation_bot
-  - action: utter_ask_breakfast
+  - action: utter_ask_food
   - action: log_conversation_bot
 
 # Conversation part 2 (high confidence)
 - rule: part 2A
   steps:
-  - intent: inform_breakfast
+  - intent: inform_food
   - action: log_conversation_user
-  - action: utter_respond_breakfast
+  - action: utter_respond_food
   - action: log_conversation_bot
-  - action: utter_ask_go_school
+  - action: utter_ask_person
   - action: log_conversation_bot
 
 # Conversation part 3 (high confidence)
 - rule: part 3A
   steps:
-  - intent: inform_go_school
+  - intent: inform_person
   - action: log_conversation_user
-  - action: utter_respond_go_school
+  - action: utter_respond_person
   - action: log_conversation_bot
-  - action: utter_ask_lunch
+  - action: utter_ask_sport
   - action: log_conversation_bot
 
 # Conversation part 4 (high confidence)
 - rule: part 4A
   steps:
-  - intent: inform_lunch
+  - intent: inform_sport
   - action: log_conversation_user
-  - action: utter_respond_lunch
+  - action: utter_respond_sport
   - action: log_conversation_bot
-  - action: utter_ask_go_home
+  - action: utter_ask_country
   - action: log_conversation_bot
 
 # Conversation part 5 (high confidence)
 - rule: part 5A
   steps:
-  - intent: inform_go_home
+  - intent: inform_country
   - action: log_conversation_user
-  - action: utter_respond_go_home
+  - action: utter_respond_country
   - action: log_conversation_bot
-  - action: utter_ask_dinner
+  - action: utter_ask_place
   - action: log_conversation_bot
 
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
-  - intent: inform_dinner
+  - intent: inform_place
   - action: log_conversation_user
-  - action: utter_respond_dinner
+  - action: utter_respond_place
   - action: log_conversation_bot
-  - action: utter_ask_TV
+  - action: utter_ask_mean
   - action: log_conversation_bot
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
-  - intent: inform_TV
+  - intent: inform_mean
   - action: log_conversation_user
-  - action: utter_respond_TV
+  - action: utter_respond_mean
   - action: log_conversation_bot
-  - action: utter_ask_sleep
+  - action: utter_ask_time
   - action: log_conversation_bot
 
 # Conversation part 8 (high confidence)
 - rule: part 8A
   steps:
-  - intent: inform_sleep
+  - intent: inform_time
   - action: log_conversation_user
-  - action: utter_respond_sleep
+  - action: utter_respond_time
   - action: log_conversation_bot
   - action: utter_askme
   - action: log_conversation_bot
@@ -168,56 +168,56 @@ rules:
 - rule: part 1B
   steps:
   - action: activate_p1
-  - action: utter_ask_breakfast
+  - action: utter_ask_food
   - action: log_conversation_bot
 
 # Conversation part 2 (low confidence)
 - rule: part 2B
   steps:
   - action: activate_p2
-  - action: utter_ask_go_school
+  - action: utter_ask_person
   - action: log_conversation_bot
 
 # Conversation part 3 (low confidence)
 - rule: part 3B
   steps:
   - action: activate_p3
-  - action: utter_ask_lunch
+  - action: utter_ask_sport
   - action: log_conversation_bot
 
 # Conversation part 4 (low confidence)
 - rule: part 4B
   steps:
   - action: activate_p4
-  - action: utter_ask_go_home
+  - action: utter_ask_country
   - action: log_conversation_bot
 
 # Conversation part 5 (low confidence)
 - rule: part 5B
   steps:
   - action: activate_p5
-  - action: utter_ask_dinner
+  - action: utter_ask_place
   - action: log_conversation_bot
 
 # Conversation part 6 (low confidence)
 - rule: part 6
   steps:
   - action: activate_p6
-  - action: utter_ask_TV
+  - action: utter_ask_mean
   - action: log_conversation_bot
 
 # Conversation part 7 (low confidence)
 - rule: part 7B
   steps:
   - action: activate_p7
-  - action: utter_ask_sleep
+  - action: utter_ask_time
   - action: log_conversation_bot
 
 # Conversation part 0 (low confidence)
 - rule: part 0B
   steps:
   - action: activate_p0
-  - action: utter_ask_wakeup
+  - action: utter_ask_dessert
   - action: log_conversation_bot
 
 # Conversation part 8 (low confidence)

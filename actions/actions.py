@@ -335,7 +335,7 @@ class ActionCheckNumQuestions(Action):
         num_q=question_txt.read()
         question_txt.close()
 
-        if int(num_q) < 7:
+        if int(num_q) < 4:
             question_txt = open(uniqueFile, "w")
             nextWrite=int(num_q)+1
             question_txt.write(str(nextWrite))
@@ -349,7 +349,7 @@ class ActionCheckNumQuestions(Action):
 
         else:
             print("User asked " + str(num_q))
-            dispatcher.utter_message(text="You asked 8 questions. You're finished!")
+            dispatcher.utter_message(text="You asked 5 questions. You're finished!")
             num_qTwo=int(num_q)
             question_txt = open(uniqueFile, "w")
             question_txt.write("0")
