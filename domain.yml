@@ -50,21 +50,21 @@ responses:
 
 ##################################################################################################
   utter_ask_dessert:
-  - text: PLACEHOLDER
+  - text: アイスクリームとけーきとどちらのほうがすきですか。
   utter_ask_food:
-  - text: PLACEHOLDER
+  - text: たべものの中でどれがいちばんおいしいですか。
   utter_ask_person:
-  - text: PLACEHOLDER
+  - text: 人の中でだれがいちばんかっこういですか。
   utter_ask_sport:
-  - text: PLACEHOLDER
+  - text: スポーツの中でどれがいちばんたのしいですか。
   utter_ask_country:
-  - text: PLACEHOLDER
+  - text: 国の中でどこがいちばんおもしろいですか。
   utter_ask_place:
-  - text: PLACEHOLDER
+  - text: ところの中でどこがいちばん大すきですか。
   utter_ask_mean:
-  - text: PLACEHOLDER
+  - text: どうやって行きますか。
   utter_ask_time:
-  - text: PLACEHOLDER
+  - text: どのぐらいかかりますか。
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
 ##############################################################################################
@@ -94,13 +94,18 @@ responses:
 #BIG SLOT AND ENTITY WORK | USE SLOT + CONDITIONAL ACTION TO HAVE EVENTS
 entities:
 - name
-- time
 - email
-- education
-- hometown
-- japan_place
-- food
 - recipient
+- dessert
+- food
+- person
+- sport
+- country
+- place
+- mean
+- time
+- one
+- two
 
 slots:
   name:
@@ -110,13 +115,13 @@ slots:
     mappings:
     - type: from_entity
       entity: name
-  time:
+  dessert:
     type: text
     initial_value: null
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: time
+      entity: dessert
   email:
     type: text
     influence_conversation: true
@@ -129,6 +134,61 @@ slots:
     mappings:
     - type: from_entity
       entity: recipient
+  food:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: food
+  person:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: person
+  sport:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: sport
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
+  place:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: place
+  mean:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: mean
+  time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: time
+  one:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: one
+  two:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: two
+
 
 actions:
 - action_default_ask_affirmation

@@ -131,19 +131,51 @@ nlu:
     - [Bob](recipient)
 - intent: inform_dessert
   examples: |
-   - PLACEHOLDER
+   - [ケーキ](dessert)のほうがすきです。
+   - [ケーキ](dessert)のほうがアイスクリームよりすきです。
+   - [アイスクリーム](dessert)のほうがすきです。
+   - [アイスクリーム](dessert)のほうがケーキよりすきです。
+   - [ケーキ](dessert)のほうが大すきです。
+   - [ケーキ](dessert)のほうがアイスクリームより大すきです。
+   - [アイスクリーム](dessert)のほうが大すきです。
+   - [アイスクリーム](dessert)のほうがケーキより大すきです。
+   - 
+   -
 
 - intent: inform_food
   examples: |
-   - PLACEHOLDER
+   - [りんご](food)がいちばんおいしいです。
+   - [ピザ](food)がいちばんおいしいです。
+   - [すし](food)がいちばんおいしいです。
+   - [てんぷら](food)がいちばんおいしいです。
+   - [バーガー](food)がいちばんおいしいです。
+   - [にく](food)がいちばんおいしいです。
+   - [とんかつ](food)がいちばんおいしいです。
+   - [おもち](food)がいちばんおいしいです。
+   - [みそ](food)がいちばんおいしいです。
+   - [はばち](food)がいちばんおいしいです。
    
 - intent: inform_person
   examples: |
-   - PLACEHOLDER
+   - [リア](person)がいちばんかっこういです。
+   - [ノア](person)がいちばんかっこういです。
+   - [めぐろ先生](person)がいちばんかっこういです。
+   - [ステファニー](person)がいちばんかっこういです。
+   - [ジェイミー](person)がいちばんかっこういです。
+   - [ウィリアム](person)がいちばんかっこういです。
+   - [イザベル](person)がいちばんかっこういです。
+   - [ニーナ](person)がいちばんかっこういです。
    
 - intent: inform_sport
   examples: |
-   - PLACEHOLDER
+   - [やきゅう](sport)がいちばんたのしいです。
+   - [サーカー](sport)がいちばんたのしいです。
+   - [バスケットボール](sport)がいちばんたのしいです。
+   - [バスケ](sport)がいちばんたのしいです。
+   - [ホッケー](sport)がいちばんたのしいです。
+   - [アイスホッケー](sport)がいちばんたのしいです。
+   - [スキー](sport)がいちばんたのしいです。
+   - [たいそう](sport)がいちばんたのしいです。
    
 - intent: inform_country
   examples: |
