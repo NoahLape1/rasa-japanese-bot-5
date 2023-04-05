@@ -44,21 +44,21 @@ class ActionDefaultAskAffirmation(Action):
        print(lastBotMessage)
        
        # triggers different rules based on last bot question
-       if lastBotMessage == "何時におきますか？":
+       if lastBotMessage == "アイスクリームとけーきとどちらのほうがすきですか。":
            return [FollowupAction("activate_p1")]
-       elif lastBotMessage == "何時にあさごはんをたべますか？":
+       elif lastBotMessage == "たべものの中でどれがいちばんおいしいですか。":
            return [FollowupAction("activate_p2")]
-       elif lastBotMessage == "何時にがっこうにいきますか？":
+       elif lastBotMessage == "人の中でだれがいちばんかっこういですか。":
            return [FollowupAction("activate_p3")]
-       elif lastBotMessage == "何時にひるごはんをたべますか？":
+       elif lastBotMessage == "スポーツの中でどれがいちばんたのしいですか。":
            return [FollowupAction("activate_p4")]
-       elif lastBotMessage == "何時にいえにかえりますか？":
+       elif lastBotMessage == "国の中でどこがいちばんおもしろいですか。":
            return [FollowupAction("activate_p5")]
-       elif lastBotMessage == "何時にばんごはんをたべますか？":
+       elif lastBotMessage == "ところの中でどこがいちばん大すきですか。":
            return [FollowupAction("activate_p6")]
-       elif lastBotMessage == "何時にテレビをみますか？":
+       elif lastBotMessage == "どうやって行きますか。":
            return [FollowupAction("activate_p7")]   
-       elif lastBotMessage == "何時にねますか？":
+       elif lastBotMessage == "どのぐらいかかりますか。":
            return [FollowupAction("activate_p8")]   
        elif lastBotMessage == "おなまえは？":
            return [FollowupAction("activate_p0")]   

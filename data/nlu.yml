@@ -129,6 +129,7 @@ nlu:
     - [Jane](recipient)
     - [John](recipient)
     - [Bob](recipient)
+    - [Noah](recipient)
 - intent: inform_dessert
   examples: |
    - [ケーキ](dessert)のほうがすきです。
@@ -179,26 +180,69 @@ nlu:
    
 - intent: inform_country
   examples: |
-   - PLACEHOLDER
+   - [日本](country)がいちばんおもしろいです。
+   - [アメリカ](country)がいちばんおもしろいです。
+   - [メキツコ](country)がいちばんおもしろいです。
+   - [インド](country)がいちばんおもしろいです。
+   - [ドイツ](country)がいちばんおもしろいです。
+   - [中国](country)がいちばんおもしろいです。
    
 - intent: inform_place
   examples: |
-   - PLACEHOLDER
+   - [日本](place)がいちばん大すきです。
+   - [アメリカ](place)がいちばん大すきです。
+   - [私の家](place)がいちばん大すきです。
+   - [ニューヨーク](place)がいちばん大すきです。
+   - [デイキンソンの大学](place)がいちばん大すきです。
+   - [日本](place)がいちばんだいすきです。
+   - [アメリカ](place)がいちばんだいすきです。
+   - [私の家](place)がいちばんだいすきです。
+   - [ニューヨーク](place)がいちばんだいすきです。
+   - [デイキンソンの大学](place)がいちばんだいすきです。
+   - [日本](place)がいちばん大隙です。
+   - [アメリカ](place)がいちばん大隙です。
+   - [私の家](place)がいちばん大隙です。
+   - [ニューヨーク](place)がいちばん大隙です。
+   - [デイキンソンの大学](place)がいちばん大隙です。
    
 - intent: inform_mean
   examples: |
-   - PLACEHOLDER
+   - [ふね](mean)で行きます。
+   - [車](mean)で行きます。
+   - [ひこうき](mean)で行きます。
+   - [電車](mean)で行きます。
+   - [あるいて](mean)行きます。
    
 - intent: inform_time
   examples: |
-   - PLACEHOLDER
+   - [いちじかん](time)ぐらいかかります。
+   - [一時間](time)かかります。
+   - [さんじゅういっぷん](time)ぐらいかかります。
+   - [三十分](time)かかります。
+   - [にしゅうかん](time)ぐらいかかります。
+   - [二しゅうかん](time)かかります。
+   - [いちかげつ](time)ぐらいかかります。
+   - [三か月](time)かかります。
+   - [一年](time)ぐらいかかります。
+   - [一万年](time)かかります。
    
 - intent: question/ask_something
   examples: |
-   - PLACEHOLDER
+   - [いち](one)と[に](two)とどちらのほうが[すき](adj)ですか。
+   - [日本](one)と[アメリア](two)とどちらのほうが[おもしろい](adj)ですか。
+   - [すし](one)と[おきのみやき](two)とどちらのほうが[おいしい](adj)ですか。
+   - [家](one)と[大学](two)とどちらのほうが[つまならい](adj)ですか。
+   - [ぶつりがく](one)と[日本語](two)とどちらのほうが[むずかしい](adj)ですか。
 
 - intent: question/ask_somethingTwo
   examples: |
-   - PLACEHOLDER
+   - [いち](one)と[に](two)と[さん](three)の中で何がいちばん[すき](adj)ですか。
+   - [日本](one)と[アメリア](two)と[インド](three)の中でどこがいちばん[おもしろい](adj)ですか。
+   - [いし](one)と[ぼし](two)と[かさ](three)の中でどれがいちばん[たのしい](adj)ですか。
+   - [らけし](one)と[山川さん](two)と[ノア](three)の中でだれがいちばん[かっこうい](adj)ですか。
+   - [すし](one)と[おきのみやき](two)と[てんぷら](three)の中で何がいちばん[おいしい](adj)ですか。
+   - [家](one)と[大学](two)と[高校](three)の中でどこがいちばん[つまならい](adj)ですか。
+   - [シャツ](one)と[くつ](two)と[めぐね](three)の中でどれがいちばん[きれい](adj)ですか。
+   - [日本語](one)と[ぶつりがく](two)と[さんがく](three)の中で何がいちばん[むずかしい](adj)ですか。
 
 

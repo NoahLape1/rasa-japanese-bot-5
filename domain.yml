@@ -69,26 +69,29 @@ responses:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
 ##############################################################################################
   utter_respond_dessert:
-  - text: PLACEHOLDER
+  - text: なるほど、{dessert}はおいしいですね。
   utter_respond_food:
-  - text: PLACEHOLDER
+  - text: そうか、{food}を食べたことがありません。
   utter_respond_person:
-  - text: PLACEHOLDER
+  - text: そうか、{person}がとてもすきですね。
   utter_respond_sport:
-  - text: PLACEHOLDER
+  - text: そうか、{sport}はたのしいです。
   utter_respond_country:
-  - text: PLACEHOLDER
+  - text: まじ、{country}は大きいですね。
   utter_respond_place:
-  - text: PLACEHOLDER
+  - text: そうですね。{place}はきれいですね。
   utter_respond_mean:
-  - text: PLACEHOLDER
+  - text: すごい、{mean}はおもしろいです。
   utter_respond_time:
-  - text: PLACEHOLDER
+  - text: なるほど、{time}はとういですね。
 ##############################################################################################
   utter_question/ask_something:
-  - text: PLACEHOLDER
+  - text: あの、{one}のほうが{adj}です。
+  - text: あの、{two}のほうが{adj}です。
   utter_question/ask_somethingTwo:
-  - text: PLACEHOLDER
+  - text: あの、{one}がいちばん{adj}です。
+  - text: あの、{two}がいちばん{adj}です。
+  - text: あの、{three}がいちばん{adj}です。
 ##############################################################################################
 
 #BIG SLOT AND ENTITY WORK | USE SLOT + CONDITIONAL ACTION TO HAVE EVENTS
@@ -106,6 +109,8 @@ entities:
 - time
 - one
 - two
+- three
+- adj
 
 slots:
   name:
@@ -188,6 +193,18 @@ slots:
     mappings:
     - type: from_entity
       entity: two
+  three:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: three
+  adj:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: adj
 
 
 actions:
