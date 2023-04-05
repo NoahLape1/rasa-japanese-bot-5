@@ -50,7 +50,7 @@ responses:
 
 ##################################################################################################
   utter_ask_dessert:
-  - text: アイスクリームとけーきとどちらのほうがすきですか。
+  - text: アイスクリームとケーキとどちらのほうがすきですか。
   utter_ask_food:
   - text: たべものの中でどれがいちばんおいしいですか。
   utter_ask_person:
@@ -77,7 +77,7 @@ responses:
   utter_respond_sport:
   - text: そうか、{sport}はたのしいです。
   utter_respond_country:
-  - text: まじ、{country}は大きいですね。
+  - text: まじ、{place}は大きいですね。
   utter_respond_place:
   - text: そうですね。{place}はきれいですね。
   utter_respond_mean:
@@ -94,7 +94,9 @@ responses:
   - text: あの、{three}がいちばん{adj}です。
 ##############################################################################################
 
-#BIG SLOT AND ENTITY WORK | USE SLOT + CONDITIONAL ACTION TO HAVE EVENTS
+#Doesn't really know if students say correct things or not
+#Very linear
+#Liable to mess up and explode
 entities:
 - name
 - email
