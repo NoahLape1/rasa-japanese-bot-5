@@ -15,6 +15,7 @@ intents:
 - inform_food
 - inform_person
 - inform_sport
+- inform_season
 - inform_country
 - inform_place
 - inform_mean
@@ -33,7 +34,7 @@ responses:
   - text: ではまたね。(・ω・)ノ
     image: https://media.tenor.com/inhg61kTkrwAAAAi/cute.gif
   utter_iamabot:
-  - text: ラサのボートです.
+  - text: ラサです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
   utter_ask_name:
   - text: おなまえは？
@@ -46,44 +47,48 @@ responses:
   utter_askemail:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
-  - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+  - text: ありがとうございました！しつもんはおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
 
 ##################################################################################################
   utter_ask_dessert:
   - text: アイスクリームとケーキとどちらのほうがすきですか。
   utter_ask_food:
-  - text: たべものの中でどれがいちばんおいしいですか。
+  - text: 日本のたべものの中で何がいちばんおいしいですか。
   utter_ask_person:
-  - text: 人の中でだれがいちばんかっこういですか。
+  - text: ゆうめい人の中でだれがいちばんかっこいいですか。
   utter_ask_sport:
   - text: スポーツの中でどれがいちばんたのしいですか。
+  utter_ask_season:
+  - text: きせつの中でいつがいちばんすきですか。
   utter_ask_country:
-  - text: 国の中でどこがいちばんおもしろいですか。
+  - text: アメリカの中で町がいちばんおもしろいですか。
   utter_ask_place:
-  - text: ところの中でどこがいちばん大すきですか。
+  - text: アメリカの中でどこがいちばんきれいですか。
   utter_ask_mean:
   - text: どうやって行きますか。
   utter_ask_time:
   - text: どのぐらいかかりますか。
   utter_askme:
-  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
+  - text: 私にも聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
 ##############################################################################################
   utter_respond_dessert:
   - text: なるほど、{dessert}はおいしいですね。
   utter_respond_food:
-  - text: そうか、{food}を食べたことがありません。
+  - text: そうですか、{food}を食べたことがありません。
   utter_respond_person:
-  - text: そうか、{person}がとてもすきですね。
+  - text: そうですか、{person}がとてもすきですか。
   utter_respond_sport:
-  - text: そうか、{sport}はたのしいです。
+  - text: そうですか、{sport}はたのしいです。
+  utter_respond_season:
+  - text: なるほど、{season}にいい天気ですね。
   utter_respond_country:
-  - text: まじ、{place}は大きいですね。
+  - text: ほんとうですか。{place}はすごいですね。
   utter_respond_place:
-  - text: そうですね。{place}はきれいですね。
+  - text: そうですか。{place}はきれいですね。
   utter_respond_mean:
   - text: すごい、{mean}はおもしろいです。
   utter_respond_time:
-  - text: なるほど、{time}はとういですね。
+  - text: なるほど、{time}はとおいですね。
 ##############################################################################################
   utter_question/ask_something:
   - text: あの、{one}のほうが{adj}です。
@@ -105,6 +110,7 @@ entities:
 - food
 - person
 - sport
+- season
 - country
 - place
 - mean
@@ -117,14 +123,14 @@ entities:
 slots:
   name:
     type: text
-    initial_value: null
+    initial_value: 人
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: name
   dessert:
     type: text
-    initial_value: null
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
@@ -143,66 +149,84 @@ slots:
       entity: recipient
   food:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: food
   person:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: person
   sport:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: sport
+  season:
+    type: text
+    initial_value: はる
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: season
   country:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: country
   place:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: place
   mean:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: mean
   time:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: time
   one:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: one
   two:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: two
   three:
     type: text
+    initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: three
   adj:
     type: text
+    initial_value: すき
     influence_conversation: true
     mappings:
     - type: from_entity
@@ -237,12 +261,14 @@ actions:
 - activate_p6
 - activate_p7
 - activate_p8
+- activate_p9
 - activate_p0
 ##################################################################################################
 - utter_ask_dessert
 - utter_ask_food
 - utter_ask_person
 - utter_ask_sport
+- utter_ask_season
 - utter_ask_country
 - utter_ask_place
 - utter_ask_mean

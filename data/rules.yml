@@ -83,6 +83,16 @@ rules:
   - action: log_conversation_user
   - action: utter_respond_sport
   - action: log_conversation_bot
+  - action: utter_ask_season
+  - action: log_conversation_bot
+
+# Conversation part 4.5 (high confidence)
+- rule: part 4.5A
+  steps:
+  - intent: inform_season
+  - action: log_conversation_user
+  - action: utter_respond_season
+  - action: log_conversation_bot
   - action: utter_ask_country
   - action: log_conversation_bot
 
@@ -187,6 +197,13 @@ rules:
 
 # Conversation part 4 (low confidence)
 - rule: part 4B
+  steps:
+  - action: activate_p9
+  - action: utter_ask_season
+  - action: log_conversation_bot
+
+# Conversation part 4.5 (low confidence)
+- rule: part 4.5B
   steps:
   - action: activate_p4
   - action: utter_ask_country

@@ -39,6 +39,12 @@ stories:
   - action: log_conversation_user
   - action: utter_respond_sport
   - action: log_conversation_bot
+  - action: utter_ask_season
+  - action: log_conversation_bot
+  - intent: inform_season
+  - action: log_conversation_user
+  - action: utter_respond_season
+  - action: log_conversation_bot
   - action: utter_ask_country
   - action: log_conversation_bot
   - intent: inform_country

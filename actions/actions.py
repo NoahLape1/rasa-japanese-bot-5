@@ -46,22 +46,24 @@ class ActionDefaultAskAffirmation(Action):
        # triggers different rules based on last bot question
        if lastBotMessage == "アイスクリームとけーきとどちらのほうがすきですか。":
            return [FollowupAction("activate_p1")]
-       elif lastBotMessage == "たべものの中でどれがいちばんおいしいですか。":
+       elif lastBotMessage == "日本のたべものの中で何がいちばんおいしいですか。":
            return [FollowupAction("activate_p2")]
-       elif lastBotMessage == "人の中でだれがいちばんかっこういですか。":
+       elif lastBotMessage == "ゆうめい人の中でだれがいちばんかっこいいですか。":
            return [FollowupAction("activate_p3")]
        elif lastBotMessage == "スポーツの中でどれがいちばんたのしいですか。":
-           return [FollowupAction("activate_p4")]
-       elif lastBotMessage == "国の中でどこがいちばんおもしろいですか。":
+           return [FollowupAction("activate_p9")]
+       elif lastBotMessage == "アメリカの中で町がいちばんおもしろいですか。":
            return [FollowupAction("activate_p5")]
-       elif lastBotMessage == "ところの中でどこがいちばん大すきですか。":
+       elif lastBotMessage == "アメリカの中でどこがいちばんきれいですか。":
            return [FollowupAction("activate_p6")]
        elif lastBotMessage == "どうやって行きますか。":
            return [FollowupAction("activate_p7")]   
        elif lastBotMessage == "どのぐらいかかりますか。":
            return [FollowupAction("activate_p8")]   
        elif lastBotMessage == "おなまえは？":
-           return [FollowupAction("activate_p0")]   
+           return [FollowupAction("activate_p0")] 
+       elif lastBotMessage == "きせつの中でいつがいちばんすきですか。":
+           return [FollowupAction("activate_p4")]  
        # Fallback for if the bot doesn't understand the receipient's name for the email or the email address
        elif "Please type the name of the person you want to email." in lastBotMessage:
            dispatcher.utter_message('The person you want to email is ' + lastOutput)
