@@ -189,15 +189,15 @@ actions:
 - activate_p9
 - activate_p0
 ##################################################################################################
-- utter_ask_dessert
-- utter_ask_food
-- utter_ask_person
-- utter_ask_sport
-- utter_ask_season
-- utter_ask_country
-- utter_ask_place
-- utter_ask_mean
-- utter_ask_time
+# - utter_ask_dessert
+# - utter_ask_food
+# - utter_ask_person
+# - utter_ask_sport
+# - utter_ask_season
+# - utter_ask_country
+# - utter_ask_place
+# - utter_ask_mean
+# - utter_ask_time
 ##################################################################################################
 
 
