@@ -50,75 +50,55 @@ responses:
   - text: ありがとうございました！しつもんはおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
 
 ##################################################################################################
-  utter_ask_dessert:
-  - text: アイスクリームとケーキとどちらのほうがすきですか。
-  utter_ask_food:
-  - text: 日本のたべものの中で何がいちばんおいしいですか。
-  utter_ask_person:
-  - text: ゆうめい人の中でだれがいちばんかっこいいですか。
-  utter_ask_sport:
-  - text: スポーツの中でどれがいちばんたのしいですか。
-  utter_ask_season:
-  - text: きせつの中でいつがいちばんすきですか。
-  utter_ask_country:
-  - text: アメリカの中で町がいちばんおもしろいですか。
-  utter_ask_place:
-  - text: アメリカの中でどこがいちばんきれいですか。
-  utter_ask_mean:
-  - text: どうやって行きますか。
+  utter_ask_genki:
+  - text: 
+  utter_ask_tennis:
+  - text: 
+  utter_ask_day:
+  - text: 
   utter_ask_time:
-  - text: どのぐらいかかりますか。
-  utter_askme:
-  - text: 私にも聞いてください。Please ask the questions that are listed on the webpage and only ask which do you like questions.
+  - text: 
+  utter_ask_where:
+  - text: 
+  utter_ask_what_after:
+  - text: 
+  utter_finish:
+  - text: 
 ##############################################################################################
-  utter_respond_dessert:
-  - text: なるほど、{dessert}はおいしいですね。
-  utter_respond_food:
-  - text: そうですか、{food}を食べたことがありません。
-  utter_respond_person:
-  - text: そうですか、{person}がとてもすきですか。
-  utter_respond_sport:
-  - text: そうですか、{sport}はたのしいです。
-  utter_respond_season:
-  - text: なるほど、{season}にいい天気ですね。
-  utter_respond_country:
-  - text: ほんとうですか。{place}はすごいですね。
-  utter_respond_place:
-  - text: そうですか。{place}はきれいですね。
-  utter_respond_mean:
-  - text: すごい、{mean}はおもしろいです。
+  utter_respond_good:
+  - text:
+  utter_respond_bad:
+  - text:
+  utter_respond_angry:
+  - text:
+  ############################################################################################
+  utter_respond_day:
+  - text: 
+  utter_respond_tennis:
+  - text: 
   utter_respond_time:
-  - text: なるほど、{time}はとおいですね。
-##############################################################################################
-  utter_question/ask_something:
-  - text: あの、{one}のほうが{adj}です。
-  - text: あの、{two}のほうが{adj}です。
-  utter_question/ask_somethingTwo:
-  - text: あの、{one}がいちばん{adj}です。
-  - text: あの、{two}がいちばん{adj}です。
-  - text: あの、{three}がいちばん{adj}です。
+  - text: 
+  utter_respond_where:
+  - text: 
+  utter_respond_mean:
+  - text: 
+  utter_respond_after1:
+  - text: 
+  utter_respond_after2:
+  - text:
+  utter_respond_afterfinal:
+  - text:
 ##############################################################################################
 
-#Doesn't really know if students say correct things or not
-#Very linear
-#Liable to mess up and explode
 entities:
 - name
 - email
 - recipient
-- dessert
-- food
-- person
-- sport
-- season
-- country
-- place
-- mean
+- day
+- tennis
 - time
-- one
-- two
-- three
-- adj
+- where
+- activity
 
 slots:
   name:
@@ -128,13 +108,6 @@ slots:
     mappings:
     - type: from_entity
       entity: name
-  dessert:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: dessert
   email:
     type: text
     influence_conversation: true
@@ -147,55 +120,20 @@ slots:
     mappings:
     - type: from_entity
       entity: recipient
-  food:
+  day:
     type: text
     initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: food
-  person:
+      entity: day
+  tennis:
     type: text
     initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: person
-  sport:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: sport
-  season:
-    type: text
-    initial_value: はる
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: season
-  country:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: country
-  place:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: place
-  mean:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: mean
+      entity: tennis
   time:
     type: text
     initial_value: それ
@@ -203,34 +141,21 @@ slots:
     mappings:
     - type: from_entity
       entity: time
-  one:
+  where:
+    type: text
+    initial_value: はる
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: where
+  activity:
     type: text
     initial_value: それ
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: one
-  two:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: two
-  three:
-    type: text
-    initial_value: それ
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: three
-  adj:
-    type: text
-    initial_value: すき
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: adj
+      entity: activity
+  
 
 
 actions:
@@ -274,8 +199,7 @@ actions:
 - utter_ask_mean
 - utter_ask_time
 ##################################################################################################
-- utter_question/ask_something
-- utter_question/ask_somethingTwo
+
 
 
 session_config:
