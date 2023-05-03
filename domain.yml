@@ -11,15 +11,9 @@ intents:
 - inform_name
 
 ##################################################################################################
-- inform_dessert
-- inform_food
-- inform_person
-- inform_sport
-- inform_season
-- inform_country
-- inform_place
-- inform_mean
-- inform_time
+- inform_genki
+- inform_good
+- inform_bad
 ##################################################################################################
 - question
 
@@ -199,7 +193,10 @@ actions:
 # - utter_ask_mean
 # - utter_ask_time
 ##################################################################################################
-
+- question/utter_time
+- question/utter_where
+- question/utter_what_after
+- question/utter_day
 
 
 session_config:
